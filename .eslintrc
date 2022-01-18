@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react-hooks/recommended"],
   "parserOptions": {
     "ecmaVersion": 2020,
     "ecmaFeatures": {
@@ -24,6 +20,8 @@
     "cy": false
   },
   "rules": {
+    "scss/at-rule-no-unknown": true,
+    "css.lint.unknownAtRules": "ignore",
     "eqeqeq": ["error", "always"],
     "no-console": "warn",
     "indent": [
