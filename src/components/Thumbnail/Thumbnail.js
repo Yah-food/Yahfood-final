@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Thumbnail({ recipes }) {
   const imgCSS = 'object-cover h-32 w-32 inline';
@@ -6,7 +7,9 @@ export default function Thumbnail({ recipes }) {
     <>
       <div>
         {recipes.map((item) => (
-          <img className={imgCSS} key={item.id} src={item.images} />
+          <Link to={`/recipe/${item.id}`} key={item.id}>
+            <img className={imgCSS} key={item.id} src={item.images} />
+          </Link>
         ))}
       </div>
     </>
