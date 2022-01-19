@@ -13,17 +13,10 @@ export async function getRecipeById(id) {
   return checkError(resp);
 }
 
-export async function updateIngredients(id, is_complete) {
-  const resp = await client.from('ingredients').update({ is_complete: is_complete }).eq('id', id);
-  return checkError(resp);
-}
-
 export async function getRecipeByIngredients(selectedIngredients) {
-  console.log(selectedIngredients);
   const resp = await client
     .from('recipes')
     .select('*, ingredients!inner(id, ingredient)')
     .in('ingredients.id', selectedIngredients);
-  console.log(checkError(resp));
   return checkError(resp);
 }

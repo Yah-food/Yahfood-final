@@ -1,12 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header/Header.js';
 import { useState, useEffect } from 'react';
-import {
-  getAllRecipes,
-  getIngredients,
-  getRecipeByIngredients,
-  updateIngredients,
-} from '../../services/fetchData';
+import { getAllRecipes, getIngredients, getRecipeByIngredients } from '../../services/fetchData';
 import Ingredients from '../../components/Ingredients/Ingredients';
 import Thumbnail from '../../components/Thumbnail/Thumbnail';
 
@@ -36,8 +31,7 @@ export default function Profile({ logoutUser }) {
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    const data = await getRecipeByIngredients(selectedIngredients);
-    console.log(data);
+    await getRecipeByIngredients(selectedIngredients);
   };
 
   const handleClick = async (item) => {
