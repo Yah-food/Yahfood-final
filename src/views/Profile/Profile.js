@@ -36,8 +36,8 @@ export default function Profile({ logoutUser }) {
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    const resp = await getRecipeByIngredients();
-    console.log(resp);
+    const data = await getRecipeByIngredients(selectedIngredients);
+    console.log(data);
   };
 
   const handleClick = async (item) => {

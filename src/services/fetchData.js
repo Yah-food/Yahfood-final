@@ -18,8 +18,12 @@ export async function updateIngredients(id, is_complete) {
   return checkError(resp);
 }
 
-export async function getRecipeByIngredients() {
-  const resp = await client.from('recipes').select('*', 'ingredients(id, name)').where();
+export async function getRecipeByIngredients(selectedIngredients) {
+  console.log(selectedIngredients);
+  const resp = await client
+    .from('recipes')
+    .select('*, ingredients!inner(id, ingredient)')
+    .in('ingredients.id', selectedIngredients);
   console.log(checkError(resp));
   return checkError(resp);
 }
