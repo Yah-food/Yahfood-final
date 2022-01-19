@@ -8,3 +8,7 @@ export async function getAllRecipes() {
   const resp = await client.from('recipes').select('*');
   return checkError(resp);
 }
+export async function getRecipeById(id) {
+  const resp = await client.from('recipes').select('*').eq({ id }).single();
+  return checkError(resp);
+}

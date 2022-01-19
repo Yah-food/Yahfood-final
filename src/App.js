@@ -5,6 +5,7 @@ import { getUser, logout } from './services/users.js';
 import Home from './views/Home/Home.js';
 import Auth from './views/Auth/Auth.js';
 import Profile from './views/Profile/Profile.js';
+import RecipeDetails from './views/RecipeDetails/RecipeDetails';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route exact path="/profile">
             {currentUser && <Profile logoutUser={logoutUser} />}
+          </Route>
+          <Route exact path="/recipe/:id">
+            <RecipeDetails />
           </Route>
         </Switch>
       </BrowserRouter>
