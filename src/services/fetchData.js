@@ -12,3 +12,14 @@ export async function getRecipeById(id) {
   const resp = await client.from('recipes').select('*').eq('id', id).single();
   return checkError(resp);
 }
+
+export async function updateIngredients(id, is_complete) {
+  const resp = await client.from('ingredients').update({ is_complete: is_complete }).eq('id', id);
+  return checkError(resp);
+}
+
+export async function getRecipeByIngredients() {
+  const resp = await client.from('recipes').select('*', 'ingredients(id, name)').where();
+  console.log(checkError(resp));
+  return checkError(resp);
+}
