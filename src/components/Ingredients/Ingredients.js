@@ -1,6 +1,11 @@
 import React from 'react';
 
-export default function Ingredients({ ingredients, handleSearch, handleClick }) {
+export default function Ingredients({
+  ingredients,
+  handleSearch,
+  handleClick,
+  selectedIngredients,
+}) {
   return (
     <>
       <form>
@@ -10,7 +15,7 @@ export default function Ingredients({ ingredients, handleSearch, handleClick }) 
               <input
                 type="checkbox"
                 value={item.ingredient}
-                checked={item.is_complete}
+                checked={selectedIngredients.includes(item.id)}
                 onChange={() => {
                   handleClick(item);
                 }}
