@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
+import Header from '../../components/Header/Header.js';
 import { useState, useEffect } from 'react';
 import { getIngredients } from '../../services/fetchData';
 import Ingredients from '../../components/Ingredients/Ingredients';
