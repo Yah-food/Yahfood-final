@@ -1,7 +1,12 @@
 import React from 'react';
 import Header from '../../components/Header/Header.js';
 import { useState, useEffect } from 'react';
-import { getAllRecipes, getIngredients, getRecipeByIngredients } from '../../services/fetchData';
+import {
+  getAllRecipes,
+  getIngredients,
+  getRecipeByIngredients,
+  getAllUserRecipes,
+} from '../../services/fetchData';
 import Ingredients from '../../components/Ingredients/Ingredients';
 import Thumbnail from '../../components/Thumbnail/Thumbnail';
 import { Link, useHistory } from 'react-router-dom';
@@ -9,14 +14,15 @@ import { Link, useHistory } from 'react-router-dom';
 export default function Profile({ logoutUser, setCurrentResults }) {
   const [ingredients, setIngredients] = useState({});
   const [recipes, setRecipes] = useState([]);
+  const [userRecipes, setUserRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
-      const data = await getIngredients();
-      setIngredients(data);
+      const data = await getAllUserRecipes();
+      setUserRecipes(data);
       setLoading(false);
     };
     fetchData();
@@ -31,6 +37,14 @@ export default function Profile({ logoutUser, setCurrentResults }) {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getIngredients();
+      setIngredients(data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
   const handleSearch = async (e) => {
     e.preventDefault();
     const data = await getRecipeByIngredients(selectedIngredients);
@@ -58,6 +72,7 @@ export default function Profile({ logoutUser, setCurrentResults }) {
       <Link to="/profile/addrecipe">
         <button>Add Recipe</button>
       </Link>
+      <Thumbnail recipes={userRecipes} />
       <Thumbnail recipes={recipes} />
       <Ingredients
         ingredients={ingredients}
