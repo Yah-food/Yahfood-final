@@ -1,4 +1,3 @@
-
 import { client, checkError } from './client.js';
 
 export function getUser() {
@@ -24,4 +23,14 @@ export async function signInUser(email, password) {
 export async function logout() {
   const response = await client.auth.signOut();
   return checkError(response);
+}
+
+export async function createNewRecipe(newRecipe) {
+  const resp = await client.from('userRecipes').insert({
+    title: newRecipe.title,
+    description: newRecipe.description,
+    instructions: newRecipe.instructions,
+    images: newRecipe.images,
+  });
+  return checkError(resp);
 }

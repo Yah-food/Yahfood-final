@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { getAllRecipes, getIngredients, getRecipeByIngredients } from '../../services/fetchData';
 import Ingredients from '../../components/Ingredients/Ingredients';
 import Thumbnail from '../../components/Thumbnail/Thumbnail';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 export default function Profile({ logoutUser, setCurrentResults }) {
   const [ingredients, setIngredients] = useState({});
@@ -55,6 +55,9 @@ export default function Profile({ logoutUser, setCurrentResults }) {
   return (
     <div>
       <Header logoutUser={logoutUser} />
+      <Link to="/profile/addrecipe">
+        <button>Add Recipe</button>
+      </Link>
       <Thumbnail recipes={recipes} />
       <Ingredients
         ingredients={ingredients}
