@@ -7,6 +7,8 @@ import Auth from './views/Auth/Auth.js';
 import Profile from './views/Profile/Profile.js';
 import RecipeDetails from './views/RecipeDetails/RecipeDetails';
 import Results from './views/Results/Results';
+import AddRecipe from './views/AddRecipe/AddRecipe';
+import ProtectedRoute from './utils/ProtectedRoute';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
@@ -35,6 +37,9 @@ function App() {
           <Route exact path="/results">
             <Results currentResults={currentResults} />
           </Route>
+          <ProtectedRoute exact path="/profile/addrecipe" currentUser={currentUser}>
+            <AddRecipe currentUser={currentUser} />
+          </ProtectedRoute>
         </Switch>
       </BrowserRouter>
     </div>
