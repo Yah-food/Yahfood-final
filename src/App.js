@@ -6,9 +6,11 @@ import Home from './views/Home/Home.js';
 import Auth from './views/Auth/Auth.js';
 import Profile from './views/Profile/Profile.js';
 import RecipeDetails from './views/RecipeDetails/RecipeDetails';
+import Results from './views/Results/Results';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
+  const [currentResults, setCurrentResults] = useState([]);
   const logoutUser = async () => {
     await logout();
     setCurrentUser(null);
@@ -25,9 +27,14 @@ function App() {
             <Auth setCurrentUser={setCurrentUser} />
           </Route>
           <Route exact path="/profile">
-            {currentUser && <Profile logoutUser={logoutUser} />}
+            {currentUser && (
+              <Profile setCurrentResults={setCurrentResults} logoutUser={logoutUser} />
+            )}
           </Route>
           <Route exact path="/recipe/:id" component={RecipeDetails} />
+          <Route exact path="/results">
+            <Results currentResults={currentResults} />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>

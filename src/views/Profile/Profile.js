@@ -4,12 +4,14 @@ import { useState, useEffect } from 'react';
 import { getAllRecipes, getIngredients, getRecipeByIngredients } from '../../services/fetchData';
 import Ingredients from '../../components/Ingredients/Ingredients';
 import Thumbnail from '../../components/Thumbnail/Thumbnail';
+import { useHistory } from 'react-router-dom';
 
-export default function Profile({ logoutUser }) {
+export default function Profile({ logoutUser, setCurrentResults }) {
   const [ingredients, setIngredients] = useState({});
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,7 +33,9 @@ export default function Profile({ logoutUser }) {
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    await getRecipeByIngredients(selectedIngredients);
+    const data = await getRecipeByIngredients(selectedIngredients);
+    setCurrentResults(data);
+    history.push('/results');
   };
 
   const handleClick = async (item) => {
