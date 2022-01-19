@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, useHistory, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
 import { getUser, logout } from './services/users.js';
@@ -9,7 +9,6 @@ import RecipeDetails from './views/RecipeDetails/RecipeDetails';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
-  // const history = useHistory();
   const logoutUser = async () => {
     await logout();
     setCurrentUser(null);
@@ -28,9 +27,7 @@ function App() {
           <Route exact path="/profile">
             {currentUser && <Profile logoutUser={logoutUser} />}
           </Route>
-          <Route exact path="/recipe/:id">
-            <RecipeDetails />
-          </Route>
+          <Route exact path="/recipe/:id" component={RecipeDetails} />
         </Switch>
       </BrowserRouter>
     </div>
