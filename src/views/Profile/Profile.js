@@ -16,35 +16,32 @@ export default function Profile({ logoutUser, setCurrentResults }) {
   const [recipes, setRecipes] = useState([]);
   const [userRecipes, setUserRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [loading2, setLoading2] = useState(true);
+  const [loading3, setLoading3] = useState(true);
   const [selectedIngredients, setSelectedIngredients] = useState([]);
   const history = useHistory();
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData1 = async () => {
       const data = await getAllUserRecipes();
       setUserRecipes(data);
       setLoading(false);
     };
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
+    const fetchData2 = async () => {
       const data = await getAllRecipes();
       setRecipes(data);
-      setLoading(false);
+      setLoading2(false);
     };
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
+    const fetchData3 = async () => {
       const data = await getIngredients();
       setIngredients(data);
-      setLoading(false);
+      setLoading3(false);
     };
-    fetchData();
+    fetchData1();
+    fetchData2();
+    fetchData3();
   }, []);
+
   const handleSearch = async (e) => {
     e.preventDefault();
     const data = await getRecipeByIngredients(selectedIngredients);
@@ -62,7 +59,7 @@ export default function Profile({ logoutUser, setCurrentResults }) {
     }
   };
 
-  if (loading) {
+  if (loading || loading2 || loading3) {
     return <h3>Loading</h3>;
   }
 

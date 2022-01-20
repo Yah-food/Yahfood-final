@@ -33,7 +33,7 @@ function App() {
               <Profile setCurrentResults={setCurrentResults} logoutUser={logoutUser} />
             )}
           </Route>
-          <Route exact path="/recipe/:id" component={RecipeDetails} />
+          <Route exact path="/recipe/:title" component={RecipeDetails} />
           <Route exact path="/results">
             <Results currentResults={currentResults} />
           </Route>

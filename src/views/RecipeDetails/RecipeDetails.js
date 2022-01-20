@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import { getRecipeById } from '../../services/fetchData';
+import { getRecipeByTitle, getUserRecipeByTitle } from '../../services/fetchData';
 
 export default function RecipeDetails(props) {
-  const id = props.match.params.id;
+  const title = props.match.params.title;
   const [recipe, setRecipe] = useState({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await getRecipeById(id);
-      setRecipe(data);
-      setLoading(false);
+    const fetchData1 = async () => {
+      const userData = await getUserRecipeByTitle(title);
+      setRecipe(userData);
     };
-    fetchData();
-  }, [id, loading]);
+    const fetchData2 = async () => {
+      const data = await getRecipeByTitle(title);
+      setRecipe(data);
+    };
+    Promise.all(fetchData1(), fetchData2()).then((result1, result2) => {
+      setLoading(false);
+    });
+  }, [title, loading]);
+
   return (
     <>
       <div>

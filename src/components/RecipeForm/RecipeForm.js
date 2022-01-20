@@ -23,7 +23,7 @@ export default function RecipeForm({
           />
         </label>
         <label>
-          Description:
+          Ingredients:
           <input
             type="text"
             name="description"

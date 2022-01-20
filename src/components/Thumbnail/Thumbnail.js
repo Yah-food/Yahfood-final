@@ -7,7 +7,7 @@ export default function Thumbnail({ recipes }) {
     <>
       <div>
         {recipes.map((item) => (
-          <Link to={`/recipe/${item.id}`} key={item.id}>
+          <Link to={`/recipe/${item.title}`} key={item.id}>
             <img className={imgCSS} key={item.id} src={item.images} />
           </Link>
         ))}

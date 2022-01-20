@@ -15,8 +15,14 @@ export async function getAllUserRecipes() {
   return checkError(resp);
 }
 
-export async function getRecipeById(id) {
-  const resp = await client.from('recipes').select('*').eq('id', id).single();
+export async function getUserRecipeByTitle(title) {
+  console.log('hello world');
+  const resp = await client.from('userRecipes').select('*').eq('title', title).single();
+  return checkError(resp);
+}
+
+export async function getRecipeByTitle(title) {
+  const resp = await client.from('recipes').select('*').eq('title', title).single();
   return checkError(resp);
 }
 
