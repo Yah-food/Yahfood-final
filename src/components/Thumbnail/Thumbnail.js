@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Thumbnail({ recipes }) {
-  const imgCSS = 'object-cover h-32 w-32 inline';
   return (
     <>
       <div className="flex flex-row overflow-x-auto">
