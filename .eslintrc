@@ -20,8 +20,6 @@
     "cy": false
   },
   "rules": {
-    "scss/at-rule-no-unknown": true,
-    "css.lint.unknownAtRules": "ignore",
     "eqeqeq": ["error", "always"],
     "no-console": "warn",
     "indent": [
