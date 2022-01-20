@@ -66,10 +66,13 @@ export default function Profile({ logoutUser, setCurrentResults }) {
   return (
     <div>
       <Header logoutUser={logoutUser} />
-      <Link to="/profile/addrecipe">
-        <button>Add Recipe</button>
-      </Link>
-      <Thumbnail recipes={userRecipes} />
+      <div className="flex flex-row">
+        <Thumbnail recipes={userRecipes} />
+        <Link to="/profile/addrecipe" className="flex justify-items-center">
+          <img src=""></img>
+          <button>Add Recipe</button>
+        </Link>
+      </div>
       <Thumbnail recipes={recipes} />
       <Ingredients
         ingredients={ingredients}
@@ -77,7 +80,6 @@ export default function Profile({ logoutUser, setCurrentResults }) {
         handleClick={handleClick}
         selectedIngredients={selectedIngredients}
       />
-      <h1>Welcome to your profile</h1>
     </div>
   );
 }
