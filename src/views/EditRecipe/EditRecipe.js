@@ -29,8 +29,10 @@ export default function EditRecipe() {
     } catch {
       alert('Error, try again');
     }
-    history.push(`/profile/editrecipe/${recipe.title}`);
+    history.push(`/recipe/${recipe.title}`);
   };
+
+
 
   return (
     <div>

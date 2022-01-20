@@ -39,3 +39,8 @@ export async function editRecipe(recipe) {
   const resp = await client.from('userRecipes').update(recipe).eq('title', recipe.title);
   return checkError(resp);
 }
+
+export async function deleteRecipe(recipe) {
+  const resp = await client.from('userRecipes').delete().match({ title: recipe.title });
+  return checkError(resp);
+}

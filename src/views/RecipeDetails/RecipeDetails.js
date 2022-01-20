@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { getRecipeByTitle, getUserRecipeByTitle } from '../../services/fetchData';
-import { Link } from 'react-router-dom';
-
+import { Link, useHistory } from 'react-router-dom';
+import { deleteRecipe } from '../../services/users';
 export default function RecipeDetails(props) {
   const title = props.match.params.title;
   const [recipe, setRecipe] = useState({});
   const [loading, setLoading] = useState(true);
+  const history = useHistory();
 
   useEffect(() => {
     const fetchData1 = async () => {
@@ -20,6 +21,12 @@ export default function RecipeDetails(props) {
       setLoading(false);
     });
   }, [title, loading]);
+
+  const handleDelete = async (e) => {
+    e.preventDefault();
+    await deleteRecipe(recipe);
+    history.push('/profile');
+  };
 
   return (
     <>
@@ -37,7 +44,7 @@ export default function RecipeDetails(props) {
         <button>Edit</button>
       </Link>
       
-      <button>Delete</button>
+      <button onClick={handleDelete}>Delete</button>
     </>
   );
 }
