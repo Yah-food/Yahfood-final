@@ -11,22 +11,21 @@ import AddRecipe from './views/AddRecipe/AddRecipe';
 import ProtectedRoute from './utils/ProtectedRoute';
 import EditRecipe from './views/EditRecipe/EditRecipe';
 
-
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
   const [currentResults, setCurrentResults] = useState([]);
+
   const logoutUser = async () => {
     await logout();
     setCurrentUser(null);
   };
 
   return (
-    <div className="App">
+    <div className="bg-yellow-600/50 h-screen">
       <BrowserRouter>
         <Switch>
           <Route path="/" exact>
             {!currentUser && <Home setCurrentUser={setCurrentUser} />}
-  
           </Route>
           <Route exact path="/login">
             <Auth setCurrentUser={setCurrentUser} />
@@ -34,7 +33,7 @@ function App() {
           <Route exact path="/profile">
             {currentUser && (
               <Profile setCurrentResults={setCurrentResults} logoutUser={logoutUser} />
-            )}          
+            )}
           </Route>
           <Route exact path="/recipe/:title" component={RecipeDetails} />
           <Route exact path="/results">
@@ -46,7 +45,6 @@ function App() {
           <ProtectedRoute exact path="/profile/editrecipe/:title" currentUser={currentUser}>
             <EditRecipe currentUser={currentUser} />
           </ProtectedRoute>
-          
         </Switch>
       </BrowserRouter>
     </div>
