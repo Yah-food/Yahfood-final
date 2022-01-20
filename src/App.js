@@ -9,6 +9,7 @@ import RecipeDetails from './views/RecipeDetails/RecipeDetails';
 import Results from './views/Results/Results';
 import AddRecipe from './views/AddRecipe/AddRecipe';
 import ProtectedRoute from './utils/ProtectedRoute';
+import EditRecipe from './views/EditRecipe/EditRecipe';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
@@ -40,6 +41,10 @@ function App() {
           <ProtectedRoute exact path="/profile/addrecipe" currentUser={currentUser}>
             <AddRecipe currentUser={currentUser} />
           </ProtectedRoute>
+          <ProtectedRoute exact path="/profile/editrecipe/:title" currentUser={currentUser}>
+            <EditRecipe currentUser={currentUser} />
+          </ProtectedRoute>
+          
         </Switch>
       </BrowserRouter>
     </div>

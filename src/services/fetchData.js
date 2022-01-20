@@ -16,7 +16,6 @@ export async function getAllUserRecipes() {
 }
 
 export async function getUserRecipeByTitle(title) {
-  console.log('hello world');
   const resp = await client.from('userRecipes').select('*').eq('title', title).single();
   return checkError(resp);
 }

@@ -34,3 +34,8 @@ export async function createNewRecipe(newRecipe) {
   });
   return checkError(resp);
 }
+
+export async function editRecipe(recipe) {
+  const resp = await client.from('userRecipes').update(recipe).eq('title', recipe.title);
+  return checkError(resp);
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getRecipeByTitle, getUserRecipeByTitle } from '../../services/fetchData';
+import { Link } from 'react-router-dom';
 
 export default function RecipeDetails(props) {
   const title = props.match.params.title;
@@ -32,6 +33,11 @@ export default function RecipeDetails(props) {
       <div>
         <p>{recipe.instructions}</p>
       </div>
+      <Link to={`/profile/editrecipe/${recipe.title}`}>
+        <button>Edit</button>
+      </Link>
+      
+      <button>Delete</button>
     </>
   );
 }
