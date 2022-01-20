@@ -66,11 +66,12 @@ export default function Profile({ logoutUser, setCurrentResults }) {
   return (
     <div>
       <Header logoutUser={logoutUser} />
-      <div className="">
-        <Link to="/profile/addrecipe">
+      <div className="flex flex-row">
+        <Thumbnail recipes={userRecipes} />
+        <Link to="/profile/addrecipe" className="flex justify-items-center">
+          <img src=""></img>
           <button>Add Recipe</button>
         </Link>
-        <Thumbnail recipes={userRecipes} />
       </div>
       <Thumbnail recipes={recipes} />
       <Ingredients
