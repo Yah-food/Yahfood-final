@@ -24,7 +24,7 @@ export default function Auth({ setCurrentUser }) {
   };
   return (
     <div>
-      <div className="tabs">
+      <div className="tabs flex justify-center">
         <h1
           onClick={() => {
             setType('signin');
