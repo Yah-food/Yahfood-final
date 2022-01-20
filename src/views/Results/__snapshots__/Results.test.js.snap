@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the recipe card on the results page 1`] = `
+<div>
+  <div>
+    <div>
+      <div
+        class="flex flex-row overflow-x-auto"
+      >
+        <div>
+          <h3
+            class="flex justify-center"
+          >
+            Fried Chicken
+          </h3>
+          <a
+            href="/recipe/Fried Chicken"
+          >
+            <div
+              class="object-cover h-48 w-48 flex justify-center m-5"
+            >
+              <img
+                src="https://www.tasteofhome.com/wp-content/uploads/2018/01/Best-Ever-Fried-Chicken_EXPS_MCMZ16_23240_B07_12_3b.jpg?resize=700,700"
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

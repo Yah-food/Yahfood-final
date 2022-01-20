@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getRecipeByTitle, getUserRecipeByTitle } from '../../services/fetchData';
 import { Link, useHistory } from 'react-router-dom';
 import { deleteRecipe } from '../../services/users';
+
 export default function RecipeDetails(props) {
   const title = props.match.params.title;
   const [recipe, setRecipe] = useState({});
@@ -17,7 +18,7 @@ export default function RecipeDetails(props) {
       const data = await getRecipeByTitle(title);
       setRecipe(data);
     };
-    Promise.all(fetchData1(), fetchData2()).then((result1, result2) => {
+    Promise.all([fetchData1(), fetchData2()]).then((result1, result2) => {
       setLoading(false);
     });
   }, [title, loading]);
@@ -35,7 +36,7 @@ export default function RecipeDetails(props) {
         <img src={recipe.images} />
       </div>
       <div>
-        <p>{recipe.ingredients}</p>
+        <p>{recipe.description}</p>
       </div>
       <div>
         <p>{recipe.instructions}</p>
@@ -43,7 +44,7 @@ export default function RecipeDetails(props) {
       <Link to={`/profile/editrecipe/${recipe.title}`}>
         <button>Edit</button>
       </Link>
-      
+
       <button onClick={handleDelete}>Delete</button>
     </>
   );

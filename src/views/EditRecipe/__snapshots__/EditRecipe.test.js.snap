@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders edit individual recipe 1`] = `
+<div>
+  <div>
+    <div>
+      <form>
+        <label>
+          Title:
+          <input
+            name="title"
+            type="text"
+            value="Birria"
+          />
+        </label>
+        <label>
+          Ingredients:
+          <input
+            name="description"
+            type="text"
+            value="Meat (Lamb), dried chili peppers"
+          />
+        </label>
+        <label>
+          Instructions:
+          <input
+            name="instructions"
+            type="text"
+            value="It is a traditional ancestral soup or stew made from a combination of chili pepper-based goat meat adobo, garlic, cumin, bay leaves, and thyme, and cooked at a low heat."
+          />
+        </label>
+        <label>
+          Image url:
+          <input
+            name="images"
+            type="text"
+            value="https://www.thespruceeats.com/thmb/g1NmB3Jzsoe9TlGbEKRN1mNvMJg=/1500x1000/filters:fill(auto,1)/birria-tacos-recipe-5189284-hero-01-56190b7eb77b4370a0bf7f2341e94ee4.jpg"
+          />
+        </label>
+        <div>
+          <button>
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
