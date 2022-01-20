@@ -2,18 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function RecipeCard({ allRecipes }) {
-  const imgCSS = 'object-cover h-96 w-96 inline';
   return (
     <>
       <div>
-        {allRecipes.map((item) => (
-          <>
-            <h3>{item.title}</h3>
-            <Link to={`/recipe/${item.id}`}>
-              <img className={imgCSS} key={item.id} src={item.images}></img>
-            </Link>
-          </>
-        ))}
+        <div className="flex flex-row overflow-x-auto">
+          {allRecipes.map((item) => (
+            <div key={item.id}>
+              <h3 className="flex justify-center">{item.title}</h3>
+              <Link to={`/recipe/${item.id}`}>
+                <div className="object-cover h-48 w-48 flex justify-center m-5">
+                  <img
+                    
+                    key={item.id}
+                    src={item.images}
+                  ></img>
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

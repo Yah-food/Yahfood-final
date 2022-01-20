@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import { getAllRecipes } from '../../services/fetchData';
 
@@ -22,9 +21,14 @@ export default function Home() {
       return <h1>loading... </h1>;
     } else {
       return (
-        <div>
-          <h1>Yafood</h1>
-          <Link to="/login">Login</Link>
+        <div className="bg-yellow-600/50 h-screen">
+          <div className="flex justify-center">
+            <img className="w-24 h-24 flex justify-center" src="frying-pan.png" />
+          </div>
+          <h1 className="flex justify-center font-sans">Yafood!</h1>
+          <Link className="flex justify-center" to="/login">
+            Login
+          </Link>
           <div>
             <RecipeCard allRecipes={allRecipes}></RecipeCard>
           </div>
