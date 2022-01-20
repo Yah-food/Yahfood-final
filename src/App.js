@@ -25,6 +25,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             {!currentUser && <Home setCurrentUser={setCurrentUser} />}
+            {currentUser && <Profile setCurrentUser={setCurrentUser} />}
           </Route>
           <Route exact path="/login">
             <Auth setCurrentUser={setCurrentUser} />
