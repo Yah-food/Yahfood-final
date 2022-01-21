@@ -31,30 +31,32 @@ export default function RecipeDetails(props) {
 
   return (
     <>
-      <div className="pt-2">
-        <Link to="/profile" className="mx-5">
-          <button>Back</button>
-        </Link>
-      </div>
-      <div className="flex justify-center font-sans text-4xl opacity-70 p-5">
-        <h1>{recipe.title}</h1>
-      </div>
-      <div className="mx-5 shadow-lg opacity-80">
-        <img src={recipe.images} />
-      </div>
-      <div className="flex justify-center my-5 opacity-70">
-        <p>{recipe.description}</p>
-      </div>
-      <div className="flex justify-center mx-5 opacity-70">
-        <p>{recipe.instructions}</p>
-      </div>
-      <Link to={`/profile/editrecipe/${recipe.title}`}>
-        <div className="flex justify-center mx-auto my-5 w-64 opacity-70 items-center border-2 border-lime-700/50 rounded-lg bg-lime-700/50">
-          <button>Edit</button>
+      <div className="">
+        <div className="pt-2">
+          <Link to="/profile" className="mx-5">
+            <button>Back</button>
+          </Link>
         </div>
-      </Link>
-      <div className="flex justify-center mx-auto my-5 w-64 opacity-70 items-center border-2 border-red-700/50 rounded-lg bg-red-700/50">
-        <button onClick={handleDelete}>Delete</button>
+        <div className="flex justify-center font-sans text-4xl opacity-70 p-5">
+          <h1>{recipe.title}</h1>
+        </div>
+        <div className="mx-5 shadow-lg opacity-80">
+          <img src={recipe.images} />
+        </div>
+        <div className="flex justify-center my-5 opacity-70">
+          <p>{recipe.description}</p>
+        </div>
+        <div className="flex justify-center mx-5 opacity-70 h-48 overflow-y-auto shadow-inner bg-white/25 ">
+          <p>{recipe.instructions}</p>
+        </div>
+        <Link to={`/profile/editrecipe/${recipe.title}`}>
+          <div className="flex justify-center mx-auto my-5 w-64 opacity-70 items-center border-2 border-lime-700/50 rounded-lg bg-lime-700/50">
+            <button>Edit</button>
+          </div>
+        </Link>
+        <div className="flex justify-center mx-auto my-5 w-64 opacity-70 items-center border-2 border-red-700/50 rounded-lg bg-red-700/50">
+          <button onClick={handleDelete}>Delete</button>
+        </div>
       </div>
     </>
   );
