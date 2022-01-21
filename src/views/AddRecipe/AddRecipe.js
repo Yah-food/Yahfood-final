@@ -19,7 +19,6 @@ export default function AddRecipe() {
     } catch {
       // alert('Error, try again');
     }
-    window.location.replace('/profile');
   };
 
   return (
