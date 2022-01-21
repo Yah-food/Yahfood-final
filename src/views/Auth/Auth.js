@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { signInUser, signUpUser } from '../../services/users';
 import classNames from 'classnames';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-
+import './Auth.css';
 export default function Auth({ setCurrentUser }) {
   const [type, setType] = useState('signin');
   const [errorMessage, setErrorMessage] = useState('');
@@ -25,25 +25,24 @@ export default function Auth({ setCurrentUser }) {
   return (
     <div>
       <div className="tabs flex justify-center">
-        <h1
+        <h4
           onClick={() => {
             setType('signin');
           }}
           className={classNames({ active: type === 'signin' })}
         >
           Sign In
-        </h1>
-        <h1
+        </h4>
+        <h4
           onClick={() => {
             setType('signup');
           }}
           className={classNames({ active: type === 'signup' })}
         >
           Sign Up
-        </h1>
+        </h4>
       </div>
 
-      <h1>Type: {type}</h1>
       <p>{errorMessage}</p>
       <LoginForm
         errorMessage={errorMessage}
