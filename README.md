@@ -16,7 +16,7 @@ Spencer Eagleton
 
 #### Supabase Info
 
-We have a 4 public tables, one called recipes that has an id(with a foreign key), title, images, description, and instructions columns. The second table is called the ingredients table which has an id(with a foreign key), ingredient, and type column. The third table is our join table that takes the foreign key's from both the ingredients table and the recipe table as columns to link the two tables together in a many to many relationship. Our fourth table is called userRecipes which has an id, title, images, description, and instructions column. The userRecipes table is where the data that the user able to input to create a row, update a row or delete a row.
+We have a 4 public tables, one called recipes that has an id(with a foreign key), title, images, description, and instructions columns. The second table is called the ingredients table which has an id(with a foreign key), ingredient column. The third table is our join table that takes the foreign key's from both the ingredients table and the recipe table as columns to link the two tables together in a many to many relationship. Our fourth table is called userRecipes which has an id, title, images, description, and instructions column. The userRecipes table has row-level-security and is where the data that the user able to input to create a row, update a row or delete a row.
 
 [Miro Board](https://miro.com/welcomeonboard/eHFlaGxiZjZMNnRoT25kWDcwc1ExTFRJZ1FpeVlXVHhybWZlZjlmSHplOUVPdUhieGw4N1REc2c3OWFNd0oyWXwzMDc0NDU3MzY2NjAyNTcwMDUx?invite_link_id=417623334923)
 
