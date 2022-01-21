@@ -15,9 +15,9 @@ export default function AddRecipe() {
     e.preventDefault();
     try {
       await createNewRecipe(newRecipe);
-      alert('New recipe has been added!');
+      // alert('New recipe has been added!');
     } catch {
-      alert('Error, try again');
+      // alert('Error, try again');
     }
     window.location.replace('/profile');
   };
