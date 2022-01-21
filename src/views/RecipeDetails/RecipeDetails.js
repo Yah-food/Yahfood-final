@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getRecipeByTitle, getUserRecipeByTitle } from '../../services/fetchData';
 import { Link, useHistory } from 'react-router-dom';
 import { deleteRecipe } from '../../services/users';
-
+/* eslint-disable */
 export default function RecipeDetails(props) {
   const title = props.match.params.title;
   const [recipe, setRecipe] = useState({});
