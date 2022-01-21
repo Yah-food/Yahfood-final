@@ -25,7 +25,7 @@ export default function Home() {
           <div className="flex justify-center">
             <img className="w-24 h-24 flex justify-center mt-20 opacity-70" src="frying-pan.png" />
           </div>
-          <p className="flex justify-center font-sans text-7xl opacity-70">yafood!</p>
+          <p className="flex justify-center font-sans text-7xl opacity-70">yahfood!</p>
           <Link
             className="flex justify-center mx-auto my-20 w-64 items-center border-2 border-lime-700/50 rounded-lg bg-lime-700/50"
             to="/login"
