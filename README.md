@@ -93,6 +93,3 @@ Mobile First Approach
 - add: addRecipe()
 - edit: updateRecipe(), fetchRecipeById()
 - logout()
-
-Desktop Design
-![Desk Top View](./public/desktop-design.png)
