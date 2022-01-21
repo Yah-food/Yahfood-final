@@ -7,45 +7,55 @@ Object {
     <div>
       <div>
         <div
-          class="tabs"
+          class="tabs flex justify-center"
         >
-          <h1
+          <h4
             class="active"
           >
             Sign In
-          </h1>
-          <h1
+          </h4>
+          <h4
             class=""
           >
             Sign Up
-          </h1>
+          </h4>
         </div>
-        <h1>
-          Type: 
-          signin
-        </h1>
         <p />
         <div>
-          <form>
+          <form
+            class="flex flex-col"
+          >
             <p />
-            <label>
-              Email:
-              <input
-                class="border-black border-solid border-2"
-                type="email"
-                value=""
-              />
-            </label>
-            <label>
-              Password:
-              <input
-                class="border-black border-solid border-2"
-                type="password"
-                value=""
-              />
-            </label>
+            <div
+              class="flex justify-center"
+            >
+              <label
+                class="flex justify-center flex-col mx-2 mt-48"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=" border-solid rounded-lg border-2 w-40"
+                  type="email"
+                  value=""
+                />
+              </label>
+              <label
+                class="flex justify-center flex-col mx-2 mt-48"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=" border-solid rounded-lg border-2 w-40"
+                  type="password"
+                  value=""
+                />
+              </label>
+            </div>
             <input
-              class="border-black border-solid border-2"
+              class="border-black border-solid border-2 w-20 mx-auto mt-10 border-2 border-lime-700/50 rounded-lg bg-lime-700/50"
               type="submit"
             />
           </form>
@@ -56,45 +66,55 @@ Object {
   "container": <div>
     <div>
       <div
-        class="tabs"
+        class="tabs flex justify-center"
       >
-        <h1
+        <h4
           class="active"
         >
           Sign In
-        </h1>
-        <h1
+        </h4>
+        <h4
           class=""
         >
           Sign Up
-        </h1>
+        </h4>
       </div>
-      <h1>
-        Type: 
-        signin
-      </h1>
       <p />
       <div>
-        <form>
+        <form
+          class="flex flex-col"
+        >
           <p />
-          <label>
-            Email:
-            <input
-              class="border-black border-solid border-2"
-              type="email"
-              value=""
-            />
-          </label>
-          <label>
-            Password:
-            <input
-              class="border-black border-solid border-2"
-              type="password"
-              value=""
-            />
-          </label>
+          <div
+            class="flex justify-center"
+          >
+            <label
+              class="flex justify-center flex-col mx-2 mt-48"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=" border-solid rounded-lg border-2 w-40"
+                type="email"
+                value=""
+              />
+            </label>
+            <label
+              class="flex justify-center flex-col mx-2 mt-48"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=" border-solid rounded-lg border-2 w-40"
+                type="password"
+                value=""
+              />
+            </label>
+          </div>
           <input
-            class="border-black border-solid border-2"
+            class="border-black border-solid border-2 w-20 mx-auto mt-10 border-2 border-lime-700/50 rounded-lg bg-lime-700/50"
             type="submit"
           />
         </form>
