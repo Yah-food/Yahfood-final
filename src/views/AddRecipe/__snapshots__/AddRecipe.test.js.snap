@@ -6,41 +6,74 @@ Object {
   "baseElement": <body>
     <div>
       <div>
+        <div
+          class="pt-2"
+        >
+          <a
+            class="mx-5"
+            href="/profile"
+          >
+            <button>
+              Back
+            </button>
+          </a>
+        </div>
+        <div
+          class="flex justify-center font-sans text-5xl opacity-70 py-10"
+        >
+          <h1>
+            yahfood!
+          </h1>
+        </div>
         <div>
-          <form>
-            <label>
+          <form
+            class="py-20"
+          >
+            <label
+              class="flex justify-center items-center flex-col"
+            >
               Title:
               <input
+                class=" border-solid rounded-lg border-2 w-40"
                 name="title"
                 type="text"
                 value=""
               />
             </label>
-            <label>
+            <label
+              class="flex justify-center items-center flex-col"
+            >
               Ingredients:
-              <input
+              <textarea
+                class=" border-solid rounded-lg border-2 w-40"
                 name="description"
-                type="text"
-                value=""
+                type="text-area"
               />
             </label>
-            <label>
+            <label
+              class="flex justify-center items-center flex-col"
+            >
               Instructions:
-              <input
+              <textarea
+                class=" border-solid rounded-lg border-2 w-40"
                 name="instructions"
-                type="text"
-                value=""
+                type="text-area"
               />
             </label>
-            <label>
+            <label
+              class="flex justify-center items-center flex-col"
+            >
               Image url:
               <input
+                class=" border-solid rounded-lg border-2 w-40"
                 name="images"
                 type="text"
                 value=""
               />
             </label>
-            <div>
+            <div
+              class="flex justify-center mx-auto my-5 w-64 items-center border-2 border-lime-700/50 rounded-lg bg-lime-700/50 "
+            >
               <button>
                 Submit
               </button>
@@ -52,41 +85,74 @@ Object {
   </body>,
   "container": <div>
     <div>
+      <div
+        class="pt-2"
+      >
+        <a
+          class="mx-5"
+          href="/profile"
+        >
+          <button>
+            Back
+          </button>
+        </a>
+      </div>
+      <div
+        class="flex justify-center font-sans text-5xl opacity-70 py-10"
+      >
+        <h1>
+          yahfood!
+        </h1>
+      </div>
       <div>
-        <form>
-          <label>
+        <form
+          class="py-20"
+        >
+          <label
+            class="flex justify-center items-center flex-col"
+          >
             Title:
             <input
+              class=" border-solid rounded-lg border-2 w-40"
               name="title"
               type="text"
               value=""
             />
           </label>
-          <label>
+          <label
+            class="flex justify-center items-center flex-col"
+          >
             Ingredients:
-            <input
+            <textarea
+              class=" border-solid rounded-lg border-2 w-40"
               name="description"
-              type="text"
-              value=""
+              type="text-area"
             />
           </label>
-          <label>
+          <label
+            class="flex justify-center items-center flex-col"
+          >
             Instructions:
-            <input
+            <textarea
+              class=" border-solid rounded-lg border-2 w-40"
               name="instructions"
-              type="text"
-              value=""
+              type="text-area"
             />
           </label>
-          <label>
+          <label
+            class="flex justify-center items-center flex-col"
+          >
             Image url:
             <input
+              class=" border-solid rounded-lg border-2 w-40"
               name="images"
               type="text"
               value=""
             />
           </label>
-          <div>
+          <div
+            class="flex justify-center mx-auto my-5 w-64 items-center border-2 border-lime-700/50 rounded-lg bg-lime-700/50 "
+          >
             <button>
               Submit
             </button>
