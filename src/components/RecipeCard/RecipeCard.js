@@ -5,7 +5,7 @@ export default function RecipeCard({ allRecipes }) {
   return (
     <>
       <div>
-        <div className="flex flex-row overflow-x-auto">
+        <div className="flex flex-row overflow-x-auto ">
           {allRecipes.map((item) => (
             <div key={item.id}>
 
@@ -15,7 +15,7 @@ export default function RecipeCard({ allRecipes }) {
 
                 </div>
               </Link>
-              <h3 className="flex justify-center text-white/60">{item.title}</h3>
+              <h3 className="flex justify-center text-black/50">{item.title}</h3>
             </div>
           ))}
         </div>

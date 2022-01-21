@@ -21,7 +21,7 @@ export default function Home() {
       return <h1>loading... </h1>;
     } else {
       return (
-        <div className="flex justify-center flex-col">
+        <div className="flex justify-center flex-col ">
           <div className="flex justify-center">
             <img className="w-24 h-24 flex justify-center mt-20 opacity-70" src="frying-pan.png" />
           </div>
