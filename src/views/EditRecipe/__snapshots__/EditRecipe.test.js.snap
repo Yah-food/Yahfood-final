@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders edit individual recipe 1`] = `
+<div>
+  <div>
+    <div
+      class="pt-2"
+    >
+      <a
+        class="mx-5"
+        href="/profile"
+      >
+        <button>
+          Back
+        </button>
+      </a>
+    </div>
+    <div
+      class="flex justify-center font-sans text-5xl opacity-70 py-10"
+    >
+      <h1>
+        yahfood!
+      </h1>
+    </div>
+    <div>
+      <form
+        class="py-20"
+      >
+        <label
+          class="flex justify-center items-center flex-col"
+        >
+          Title:
+          <input
+            class=" border-solid rounded-lg border-2 w-40"
+            name="title"
+            type="text"
+            value="Birria"
+          />
+        </label>
+        <label
+          class="flex justify-center items-center flex-col"
+        >
+          Ingredients:
+          <textarea
+            class=" border-solid rounded-lg border-2 w-40"
+            name="description"
+            type="text-area"
+          >
+            Meat (Lamb), dried chili peppers
+          </textarea>
+        </label>
+        <label
+          class="flex justify-center items-center flex-col"
+        >
+          Instructions:
+          <textarea
+            class=" border-solid rounded-lg border-2 w-40"
+            name="instructions"
+            type="text-area"
+          >
+            It is a traditional ancestral soup or stew made from a combination of chili pepper-based goat meat adobo, garlic, cumin, bay leaves, and thyme, and cooked at a low heat.
+          </textarea>
+        </label>
+        <label
+          class="flex justify-center items-center flex-col"
+        >
+          Image url:
+          <input
+            class=" border-solid rounded-lg border-2 w-40"
+            name="images"
+            type="text"
+            value="https://www.thespruceeats.com/thmb/g1NmB3Jzsoe9TlGbEKRN1mNvMJg=/1500x1000/filters:fill(auto,1)/birria-tacos-recipe-5189284-hero-01-56190b7eb77b4370a0bf7f2341e94ee4.jpg"
+          />
+        </label>
+        <div
+          class="flex justify-center mx-auto my-5 w-64 items-center border-2 border-lime-700/50 rounded-lg bg-lime-700/50 "
+        >
+          <button>
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;

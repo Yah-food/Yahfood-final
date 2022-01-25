@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders login form page 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <div
+          class="tabs flex justify-center"
+        >
+          <h4
+            class="active"
+          >
+            Sign In
+          </h4>
+          <h4
+            class=""
+          >
+            Sign Up
+          </h4>
+        </div>
+        <p />
+        <div>
+          <form
+            class="flex flex-col"
+          >
+            <p />
+            <div
+              class="flex justify-center"
+            >
+              <label
+                class="flex justify-center flex-col mx-2 mt-48"
+              >
+                <p>
+                  Email:
+                </p>
+                <input
+                  class=" border-solid rounded-lg border-2 w-40"
+                  type="email"
+                  value=""
+                />
+              </label>
+              <label
+                class="flex justify-center flex-col mx-2 mt-48"
+              >
+                <p>
+                  Password:
+                </p>
+                <input
+                  class=" border-solid rounded-lg border-2 w-40"
+                  type="password"
+                  value=""
+                />
+              </label>
+            </div>
+            <input
+              class="border-black border-solid border-2 w-20 mx-auto mt-10 border-2 border-lime-700/50 rounded-lg bg-lime-700/50"
+              type="submit"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <div
+        class="tabs flex justify-center"
+      >
+        <h4
+          class="active"
+        >
+          Sign In
+        </h4>
+        <h4
+          class=""
+        >
+          Sign Up
+        </h4>
+      </div>
+      <p />
+      <div>
+        <form
+          class="flex flex-col"
+        >
+          <p />
+          <div
+            class="flex justify-center"
+          >
+            <label
+              class="flex justify-center flex-col mx-2 mt-48"
+            >
+              <p>
+                Email:
+              </p>
+              <input
+                class=" border-solid rounded-lg border-2 w-40"
+                type="email"
+                value=""
+              />
+            </label>
+            <label
+              class="flex justify-center flex-col mx-2 mt-48"
+            >
+              <p>
+                Password:
+              </p>
+              <input
+                class=" border-solid rounded-lg border-2 w-40"
+                type="password"
+                value=""
+              />
+            </label>
+          </div>
+          <input
+            class="border-black border-solid border-2 w-20 mx-auto mt-10 border-2 border-lime-700/50 rounded-lg bg-lime-700/50"
+            type="submit"
+          />
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
