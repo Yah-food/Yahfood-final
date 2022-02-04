@@ -35,6 +35,8 @@ export default function RecipeForm({
           </label>
           <label className="flex justify-center items-center flex-col">
             Ingredients:
+            {/* If you wanted to do this where it would add ingredients from your table */}
+            {/* You could use a multi-select and send up an array of ids to the database */}
             <textarea
               className=" border-solid rounded-lg border-2 w-40"
               type="text-area"

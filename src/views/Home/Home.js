@@ -23,6 +23,7 @@ export default function Home() {
       return (
         <div className="flex justify-center flex-col ">
           <div className="flex justify-center">
+            {/* this image isn't loading */}
             <img className="w-24 h-24 flex justify-center mt-20 opacity-70" src="frying-pan.png" />
           </div>
           <p className="flex justify-center font-sans text-7xl opacity-70">yahfood!</p>

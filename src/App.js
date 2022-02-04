@@ -39,9 +39,11 @@ function App() {
           <Route exact path="/results">
             <Results currentResults={currentResults} />
           </Route>
+          {/* use /profile/recipes/new to be more RESTful*/}
           <ProtectedRoute exact path="/profile/addrecipe" currentUser={currentUser}>
             <AddRecipe currentUser={currentUser} />
           </ProtectedRoute>
+          {/* use /profile/recipes/:title/edit to be more RESTful  */}
           <ProtectedRoute exact path="/profile/editrecipe/:title" currentUser={currentUser}>
             <EditRecipe currentUser={currentUser} />
           </ProtectedRoute>
